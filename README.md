@@ -71,7 +71,7 @@ This project is for educational and hackathon use only.
 
 - [Google Safe Browsing API](https://developers.google.com/safe-browsing/)
 - [FastAPI](https://fastapi.tiangolo.com/)
-- [Sri Shakthi University, Coimbatore] Hackathon Organizers
+- [Sri Shakthi Engineering and Technology, Coimbatore] Hackathon Organizers
 
 ---
 
