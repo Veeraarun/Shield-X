@@ -51,13 +51,15 @@ Browser UI
 
 ```text
 Shield-X/
-├── backend.py                 # FastAPI API
-├── index.html                 # Frontend
-├── script.js                  # API calls and result UI
-├── style.css                  # Frontend styling
-├── screenshot.png             # Demo screenshot
-├── output-onlinegiftools.gif  # Demo animation
-├── test.py                    # Basic test file
+├── backend.py
+├── index.html
+├── script.js
+├── style.css
+├── requirements.txt
+├── .env.example
+├── screenshot.png
+├── output-onlinegiftools.gif
+├── test.py
 └── README.md
 ```
 
@@ -70,23 +72,21 @@ git clone https://github.com/Veeraarun/Shield-X.git
 cd Shield-X
 ```
 
-### 2. Install Python dependencies
+### 2. Install dependencies
 
 ```bash
-pip install fastapi uvicorn requests
+python -m pip install -r requirements.txt
 ```
 
 ### 3. Configure the API key
 
-The backend requires a Google Safe Browsing API key. Store it in an environment variable rather than committing a key to the repository.
-
-For example:
+Create a local `.env` file or configure the environment variable directly:
 
 ```env
 GOOGLE_API_KEY=your_api_key_here
 ```
 
-Then update `backend.py` to read the value from the environment.
+The application reads `GOOGLE_API_KEY` from the environment. Never commit `.env` or real API credentials.
 
 ### 4. Start the API
 
@@ -98,7 +98,7 @@ The frontend currently expects the backend at `http://127.0.0.1:8000`.
 
 ## ⚠️ Security Note
 
-**Do not commit API keys to GitHub.** If the key currently present in the repository is a real credential, revoke/rotate it and move the replacement to environment variables immediately.
+**Never commit API keys to GitHub.** If an API key was previously committed to this repository, revoke/rotate that credential and use a replacement stored in an environment variable. Removing a key from the latest file does not remove it from Git history.
 
 ## 🔍 How It Works
 
